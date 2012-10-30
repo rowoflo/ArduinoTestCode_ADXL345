@@ -42,7 +42,7 @@ void setup()
 {
     pinMode(13, OUTPUT);
     Serial.begin(9600);
-	adxl.initialize();
+    adxl.initialize();
     
     //set activity/ inactivity thresholds (0-255)
     adxl.setActivityThreshold(75); //62.5mg per increment
@@ -67,7 +67,7 @@ void setup()
 void loop()
 {
     int x, y, z;
-	double xyz[3];
+    double xyz[3];
     double theta, phi;
     adxl.readAccel(&x, &y, &z);  // read the accl values into variables x,y,z
     adxl.get_Gxyz(xyz); // read accl value in units of g into xyz[0-2]
